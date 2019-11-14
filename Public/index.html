@@ -1,0 +1,38 @@
+<html>
+<head>
+	<title>JavaScript Executor</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<meta name="robots" content="noindex,nofollow">
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript">jsver = 1.0;</script>
+	<script language="Javascript1.1">jsver = 1.1;</script>
+	<script language="Javascript1.2">jsver = 1.2;</script>
+	<script language="Javascript1.3">jsver = 1.3;</script>
+	<script language="Javascript1.4">jsver = 1.4;</script>
+	<script language="Javascript1.5">jsver = 1.5;</script>
+	<script language="Javascript1.6">jsver = 1.6;</script>
+	<script language="Javascript1.7">jsver = 1.7;</script>
+	<script language="Javascript1.8">jsver = 1.8;</script>
+	<script language="Javascript1.9">jsver = 1.9;</script>
+</head>
+<body>
+<div align="center" class="check-menu">
+	<div align="center" style="margin-bottom: 7px; margin-top: -11px;">
+		JavaScript Executor
+	</div>
+	<textarea id="codecontents" name="codecontents" class="codeclass" placeholder="Enter code here"></textarea>
+	<div style="width: 100%; height: 20px; font-size: 14px; margin-top: 10px; margin-bottom: -10px;">
+		<div style="float:right;">
+			<input type="button" name="evalCode" value="Execute" onclick="executeCode()">
+		</div>
+		<div style="float:left;">
+			<i>JavaScript Version: <span id="java-version">?</span></i>
+		</div>
+	</div>
+</div>
+<div class="console" id="console">
+</div>
+</body>
+</html>

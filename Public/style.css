@@ -1,0 +1,38 @@
+body{
+	background-color: #f0f8ff;
+}
+.codeclass{
+	border: 1px solid #fff;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	width: 90%;
+	height: 200px;
+}
+
+.check-menu{
+	background-color: #f0e68c;
+	#padding: 10px 6px 10px 15px;
+	border: 1px solid #ccc;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	padding: 20px 0px 20px 0px;
+	margin: 10px 0 1em 0;
+	width:100%;
+}
+
+.console{
+	clear: both;
+	padding: 5px;
+	font-family: Andale Mono;
+	font-size: 12px;
+	background-color: #000;
+	color: #2FFF12;
+	min-height: 130px;
+	height: auto;
+	border: 1px solid #008b8b;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
