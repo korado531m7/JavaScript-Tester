@@ -1,6 +1,19 @@
 var jsver;
+
 console.log = function(args){
-	document.getElementById('console').innerText = args;
+	addConsole(args)
+}
+
+function setConsole(value){
+	document.getElementById('console').innerText = value
+}
+
+function addConsole(value){
+	document.getElementById('console').innerText += value
+}
+
+function resetConsole(value){
+	setConsole('')
 }
 
 window.onload = function(){
@@ -8,6 +21,7 @@ window.onload = function(){
 }
 
 function executeCode(){
+	resetConsole('')
 	try{
 		eval(document.getElementById('codecontents').value)
 	}catch(e){
