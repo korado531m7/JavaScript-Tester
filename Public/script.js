@@ -12,7 +12,7 @@ function addConsole(value){
 	document.getElementById('console').innerText += value
 }
 
-function resetConsole(value){
+function resetConsole(){
 	setConsole('')
 }
 
@@ -21,7 +21,7 @@ window.onload = function(){
 }
 
 function executeCode(){
-	resetConsole('')
+	resetConsole()
 	try{
 		eval(document.getElementById('codecontents').value)
 	}catch(e){
