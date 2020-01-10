@@ -1,7 +1,12 @@
 var jsver;
+var prepared = false;
 
-console.log = function(args){
+console.log = function(...args){
 	addConsole(args)
+}
+
+function isPrepared(){
+	return prepared
 }
 
 function setConsole(value){
@@ -9,22 +14,41 @@ function setConsole(value){
 }
 
 function addConsole(value){
-	document.getElementById('console').innerText += value
+	document.getElementById('console').innerText += withEol(value)
+}
+
+function addColoredConsole(value, color){
+	document.getElementById('console').innerHTML += "<font color=\""+color+"\">"+ withEol(value)+"</font>"
+}
+
+function withEol(text){
+	return (text + "\n")
 }
 
 function resetConsole(){
 	setConsole('')
 }
 
-window.onload = function(){
-	document.getElementById('java-version').innerText = jsver;
+function clearCode(){
+	document.getElementById('codecontents').value = ""
+	addColoredConsole("Codes were cleared", "lightgreen")
 }
 
 function executeCode(){
-	resetConsole()
-	try{
-		eval(document.getElementById('codecontents').value)
-	}catch(e){
-		console.log(e)
+	if(isPrepared()){
+		resetConsole()
+		try{
+			eval(document.getElementById('codecontents').value)
+		}catch(e){
+			addColoredConsole(e, "red")
+		}
+	}else{
+		addColoredConsole("Please wait until preparation is completed", "red")
 	}
+}
+
+window.onload = function(){
+	document.getElementById('java-version').innerText = jsver;
+	resetConsole()
+	prepared = true
 }
